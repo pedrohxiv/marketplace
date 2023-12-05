@@ -2,6 +2,7 @@ import { ArrowDownToLine, CheckCircle, Leaf } from "lucide-react";
 import Link from "next/link";
 
 import { MaxWidthWrapper } from "@/components/MaxWidthWrapper";
+import { ProductReel } from "@/components/ProductReel";
 import { Button, buttonVariants } from "@/components/ui/button";
 
 const perks = [
@@ -45,6 +46,11 @@ const RootPage = () => {
             <Button variant="ghost">Our quality promise &rarr;</Button>
           </div>
         </div>
+        <ProductReel
+          title="Brand new"
+          href="/products"
+          query={{ sort: "desc", limit: 4 }}
+        />
       </MaxWidthWrapper>
       <section className="border-t border-gray-200 bg-gray-50">
         <MaxWidthWrapper className="py-20">
@@ -60,8 +66,12 @@ const RootPage = () => {
                   </div>
                 </div>
                 <div className="mt-6 md:ml-4 md:mt-0 lg:ml-0 lg:mt-6">
-                  <h3 className="text-base font-medium text-gray-900">{perk.name}</h3>
-                  <p className="mt-3 text-sm text-muted-foreground">{perk.description}</p>
+                  <h3 className="text-base font-medium text-gray-900">
+                    {perk.name}
+                  </h3>
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    {perk.description}
+                  </p>
                 </div>
               </div>
             ))}
