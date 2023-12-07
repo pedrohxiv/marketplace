@@ -1,3 +1,5 @@
+"use client";
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -85,6 +87,10 @@ export const ImageSlider = ({ urls }: ImageSliderProps) => {
           <SwiperSlide key={index} className="-z-10 relative h-full w-full">
             <Image
               fill
+              sizes="100%"
+              priority
+              placeholder="blur"
+              blurDataURL={url}
               loading="eager"
               className="-z-10 h-full w-full object-cover object-center"
               src={url}

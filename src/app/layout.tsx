@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
 
+import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { Providers } from "@/components/Providers";
 import { cn } from "@/lib/utils";
@@ -25,9 +26,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <Providers>
             <Navbar />
             <div className="flex-grow flex-1">{children}</div>
+            <Footer />
           </Providers>
         </main>
-        <Toaster position='top-center' richColors />
+        <Toaster position="top-center" richColors />
       </body>
     </html>
   );

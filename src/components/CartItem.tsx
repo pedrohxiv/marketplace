@@ -29,6 +29,7 @@ export const CartItem = ({ product }: CartItemProps) => {
                 src={image.url}
                 alt={product.name}
                 fill
+                sizes="100%"
                 className="absolute object-cover"
               />
             ) : (
