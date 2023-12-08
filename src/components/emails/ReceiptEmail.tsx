@@ -14,7 +14,6 @@ import {
   render,
 } from "@react-email/components";
 import { format } from "date-fns";
-import * as React from "react";
 
 import { formatPrice } from "../../lib/utils";
 import { Product } from "../../payload-types";
@@ -40,7 +39,7 @@ const ReceiptEmail = ({
   return (
     <Html>
       <Head />
-      <Preview>Your DigitalHippo Receipt</Preview>
+      <Preview>Your Marketplace Receipt</Preview>
 
       <Body style={main}>
         <Container style={container}>
@@ -154,7 +153,7 @@ const ReceiptEmail = ({
             <Link href="#">Privacy Policy </Link>
           </Text>
           <Text style={footerCopyright}>
-            Copyright © 2023 DigitalHippo Inc. <br />{" "}
+            Copyright © 2023 Marketplace Inc. <br />{" "}
             <Link href="#">All rights reserved</Link>
           </Text>
         </Container>
